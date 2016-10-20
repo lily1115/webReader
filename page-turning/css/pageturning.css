@@ -1,0 +1,98 @@
+p{ 
+	padding: 0; 
+	margin: 0;
+	font-size: 3em;
+	line-height: 1;
+}
+#page-box,.turn-box,.page-fixed
+{
+	overflow: hidden;
+}
+#page-box
+{
+	position: relative;
+	margin: 0 auto;
+	background-color: #eee;
+}
+.page-fixed
+{
+	position: relative;
+	height: inherit;
+	width: inherit;
+}
+.page
+{
+	height: inherit;
+	width: inherit;
+	background-color: orange;
+	overflow: hidden;
+}
+
+
+.turn-box
+{
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	top: 0;
+	left: 0;
+	transform: translateX(0px);
+	transition: all 1.5s;
+}
+.turn-page
+{
+	position: absolute;
+	top: 0;
+	left: 380px;
+	border-right: 10px solid #eee;
+	transform: rotateY(180deg) translateX(0px);
+	transition: all 1s;
+}
+.turn-content
+{
+	opacity: 0.2;
+}
+
+.shadow
+{
+	position: absolute;
+	height: 587px;
+	width: 30px;
+	top: 0;
+	left: 401px;
+	transform: translateX(0px);
+	transition: all 1.5s;
+}
+.inset-shadow
+{
+	top: -10px;
+	left: 380px;
+	z-index: 100;
+	/* background: red; */
+	background: -webkit-gradient( linear,left top,right top,from(rgba(0, 0, 0, 0.6)), to(rgba(0,0,0,0)) );
+}
+.shadow-up
+{
+	left: 371px ;
+	background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, .28)), to(rgba(0,0,0,0)));
+}
+.shadow-down
+{
+	background: -webkit-gradient( linear,left top,right top,from(rgba(0, 0, 0, .35)), to(rgba(0,0,0,0)) );
+	
+}
+
+
+#page-box:hover .shadow-up,#page-box:hover .shadow-down
+{
+	transform: translateX(-400px);
+}
+
+#page-box:hover .turn-box
+{
+	transform: translateX(-380px);
+}
+#page-box:hover .turn-page
+{
+	transform: rotateY(180deg) translateX(382px);
+}
