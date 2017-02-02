@@ -1,5 +1,4 @@
 (function(){
-
 	var util = (function(){
 		var prefix = "html5_reader_";
 		var storageGetter = function(key){
